@@ -1,0 +1,1 @@
+Build a modern, anonymous confessions platform in Streamlit where registered users can submit anonymous confessions, and view a community confession wall with reaction capabilities.
