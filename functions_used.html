@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Streamlit & Python Commands Reference</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            padding: 40px 20px;
+            color: #1a1a2e;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #6c757d;
+            font-size: 16px;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #4361ee;
+            padding-bottom: 15px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #4361ee;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        thead th {
+            background: #4361ee;
+            color: white;
+            padding: 14px 18px;
+            text-align: left;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+
+        thead th:first-child {
+            border-radius: 8px 0 0 0;
+        }
+
+        thead th:last-child {
+            border-radius: 0 8px 0 0;
+        }
+
+        tbody td {
+            padding: 12px 18px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        tbody tr {
+            transition: background 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:last-child td:first-child {
+            border-radius: 0 0 0 8px;
+        }
+
+        tbody tr:last-child td:last-child {
+            border-radius: 0 0 8px 0;
+        }
+
+        .command-code {
+            font-family: 'Courier New', Consolas, monospace;
+            background: #f1f3f5;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #212529;
+            display: inline-block;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e9ecef;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            color: #495057;
+        }
+
+        .footer {
+            text-align: center;
+            color: #6c757d;
+            font-size: 13px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            .section {
+                padding: 15px;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            thead th,
+            tbody td {
+                padding: 8px 10px;
+            }
+
+            .command-code {
+                font-size: 11px;
+                padding: 2px 6px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>📚 Streamlit & Python Commands</h1>
+        <p class="subtitle">Quick reference guide for Streamlit functions and Python CLI commands</p>
+
+        <!-- Table 1: Streamlit Functions -->
+        <div class="section">
+            <div class="section-title">📊 Streamlit Functions</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 40%;">Function</th>
+                        <th style="width: 60%;">Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="command-code">st.set_page_config()</span></td>
+                        <td>Sets browser tab title, icon, layout</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command-code">initialize_database()</span></td>
+                        <td>Creates database tables</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command-code">st.markdown()</span></td>
+                        <td>Displays text, HTML, CSS</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command-code">st.sidebar</span></td>
+                        <td>Creates sidebar content</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command-code">st.columns()</span></td>
+                        <td>Creates column layout</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command-code">st.page_link()</span></td>
+                        <td>Creates navigation links</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command-code">st.divider()</span></td>
+                        <td>Adds horizontal line</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command-code">st.success()</span></td>
+                        <td>Shows success message</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command-code">st.info()</span></td>
+                        <td>Shows info message</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command-code">st.button()</span></td>
+                        <td>Creates clickable button</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command-code">st.rerun()</span></td>
+                        <td>Refreshes the page</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Table 2: Python Commands -->
+        <div class="section">
+            <div class="section-title">💻 Python CLI Commands</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 40%;">Command</th>
+                        <th style="width: 60%;">Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="command-code">cd folder_name</span></td>
+                        <td>Change directory to folder</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command-code">py sample.py</span></td>
+                        <td>Run Python file</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command-code">py -m venv .venv</span></td>
+                        <td>Create virtual environment</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command-code">.venv\Scripts\Activate</span></td>
+                        <td>Activate venv <span class="badge">if allowed</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="command-code">.venv\Scripts\python.exe</span></td>
+                        <td>Use venv Python</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command-code">pip install -r requirements.txt</span></td>
+                        <td>Install all packages</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command-code">streamlit run app.py</span></td>
+                        <td>Run Streamlit app</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command-code">Set-ExecutionPolicy</span></td>
+                        <td>Change PowerShell security</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            ⚡ Quick reference for Streamlit & Python development
+        </div>
+    </div>
+
+</body>
+</html>
